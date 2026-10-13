@@ -4,9 +4,9 @@
   "logo": "logo.png",
   "logoAlt": "Rehabireb, centro fisioterapéutico integral",
   "locale": "es-MX",
-  "themeColor": "#6b3a96",
-  "accentSoft": "#f3eaf8",
-  "accentDeep": "#4e2870",
+  "themeColor": "#6b418b",
+  "accentSoft": "#f4f1f9",
+  "accentDeep": "#4a2c61",
   "phonePlaceholder": "686 123 456",
   "services": [
     {
