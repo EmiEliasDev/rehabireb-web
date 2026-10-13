@@ -1,0 +1,56 @@
+{
+  "name": "Rehabireb",
+  "shortName": "Rehabireb",
+  "logo": "logo.png",
+  "logoAlt": "Rehabireb, centro fisioterapéutico integral",
+  "locale": "es-MX",
+  "themeColor": "#6b3a96",
+  "accentSoft": "#f3eaf8",
+  "accentDeep": "#4e2870",
+  "phonePlaceholder": "686 123 456",
+  "services": [
+    {
+      "id": "initial",
+      "label": "Evaluación inicial (60 min)"
+    },
+    {
+      "id": "followup",
+      "label": "Seguimiento (45 min)"
+    },
+    {
+      "id": "sports",
+      "label": "Rehabilitación deportiva (45 min)"
+    },
+    {
+      "id": "massage",
+      "label": "Masaje terapéutico (30 min)"
+    }
+  ],
+  "timeSlots": [
+    "08:00",
+    "09:00",
+    "10:00",
+    "11:00",
+    "12:00",
+    "14:00",
+    "15:00",
+    "16:00",
+    "17:00"
+  ],
+  "strings": {
+    "home": {
+      "title": "Solicita una consulta",
+      "intro": "Elige un horario que te convenga. Nuestro equipo de fisioterapeutas revisa cada solicitud y la confirma, generalmente dentro de unas pocas horas.",
+      "notes": "Queremos saber más sobre tu consulta",
+      "notesPh": "Dolores, molestias, etc. Puedes detallar tu consulta.",
+      "submit": "Solicitar consulta",
+      "service": "Tipo de consulta"
+    },
+    "nav": {
+      "approvals": "Aprobar consultas"
+    }
+  },
+  "contact": {
+    "email": "rehabireb@gmail.com"
+  }
+}

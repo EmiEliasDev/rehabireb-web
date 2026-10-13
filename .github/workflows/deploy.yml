@@ -1,0 +1,40 @@
+# Rehabireb deploy. Builds EmiEliasDev/booking-app with Rehabireb's branding
+# and publishes it to this repo's GitHub Pages site.
+#
+# Repo setup (one time):
+#   Settings → Pages → Source = GitHub Actions
+#   Settings → Secrets and variables → Actions:
+#     secret   VITE_SUPABASE_URL
+#     secret   VITE_SUPABASE_ANON_KEY   (anon key only, never service_role)
+#     variable CLINIC_ID                (clinic_id_for_VITE_CLINIC_ID from the live SQL)
+#
+# The @ref on `uses:` and `app_ref` must match. Switch both to main once
+# template/booking-app is merged to main.
+
+name: Deploy
+
+on:
+  # push: branches: [main] is added at go-live, after CLINIC_ID is set.
+  workflow_dispatch:          # manual redeploy
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    uses: EmiEliasDev/booking-app/.github/workflows/build-clinic.yml@template/booking-app
+    with:
+      clinic_id: ${{ vars.CLINIC_ID }}
+      base_path: /rehabireb-web/
+      app_ref: template/booking-app
+      branding_repo: ${{ github.repository }}
+      branding_ref: ${{ github.sha }}
+    secrets:
+      VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+      VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
