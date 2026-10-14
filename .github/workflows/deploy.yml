@@ -13,7 +13,8 @@
 name: Deploy
 
 on:
-  # push: branches: [main] is added at go-live, after CLINIC_ID is set.
+  push:
+    branches: [main]          # branding/config change in this repo
   workflow_dispatch:          # manual redeploy
 
 permissions:
